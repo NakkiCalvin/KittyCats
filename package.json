@@ -1,0 +1,66 @@
+{
+  "name": "react-starter",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=10.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint **/*.js",
+    "lint:styles:css": "stylelint **/*.css --config css.stylelintrc.json",
+    "lint:styles:js": "stylelint **/*.js --config js.stylelintrc.json",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "ignore": [],
+    "linters": {
+      "**/*.{js,jsx}": "eslint",
+      "**/*.js": "stylelint --config js.stylelintrc.json",
+      "**/*.css": "stylelint --config css.stylelintrc.json"
+    },
+    "relative": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "file-loader": "^6.2.0",
+    "immutability-helper": "^2.7.1",
+    "prop-types": "^15.6.2",
+    "ramda": "^0.27.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-use": "^17.3.1",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.6.4",
+    "redux-saga": "^0.16.0",
+    "reselect": "^3.0.1",
+    "styled-components": "^5.3.1",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-redux-saga": "^0.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "redux-devtools-extension": "^2.13.7",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.1"
+  }
+}
